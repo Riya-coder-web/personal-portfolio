@@ -1,0 +1,297 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #0A192F; /* Primary Background: Dark Navy */
+  color: #E0E0E0; /* Text Color: Light Gray */
+  line-height: 1.6;
+}
+
+/* Navbar Styling */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #102A43; /* Navbar Background: Darker Navy */
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  padding: 1em 20px; /* Padding for navbar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  border-bottom: 2px solid #48CAE4; /* Upper border for navbar */
+}
+
+#navbar a {
+  color: #48CAE4; /* Accent Color: Bright Cyan */
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+#navbar a:hover {
+  color: #7ED957; /* Link Hover: Light Green */
+  text-decoration: underline;
+}
+
+/* Welcome Section */
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #48CAE4; /* Primary Background: Dark Navy */
+  padding-top: 80px; /* To prevent overlap with fixed navbar */
+}
+
+#welcome-section h1 {
+  font-size: 4em;
+  color: #112240; /* Accent Color: Bright Cyan */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#profile-image {
+  width: 400px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  margin: 20px 0; /* Space around the image */
+}
+
+/* Welcome Section Text */
+#welcome-section p {
+  text-align: center;
+  font-size: 1.5em; /* Font size for the paragraph */
+  color: black; /* Text Color */
+  max-width: 600px; /* Limit width for better readability */
+  line-height: 1.5; /* Improved line height */
+}
+
+/* Projects Section */
+#projects {
+  padding: 80px 20px;
+  background-color: #48CAE4; /* Secondary Background: Deep Blue */
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  color: #112240; /* Accent Color: Bright Cyan */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.project-tile {
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 350px;
+  padding: 25px;
+  background-color: #1E3A53; /* Project Tile Background: Grayish Blue */
+  text-align: center;
+  border: 1px solid #24426C; /* Subtle border for contrast */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project-tile:hover {
+  transform: translateY(-5px) scale(1.02);
+  background-color: #48CAE4; /* Hover Background: Vibrant Blue */
+}
+
+.project-tile a {
+  color: #48CAE4; /* Accent Color: Bright Cyan */
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.project-tile a:hover {
+  color: #7ED957; /* Link Hover: Light Green */
+  text-decoration: underline;
+}
+
+/* Profile Link Styling */
+#profile-link {
+  color: #48CAE4; /* Accent Color: Bright Cyan */
+}
+
+#profile-link:hover {
+  color: #7ED957; /* Link Hover: Light Green */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* About Me Section */
+#about-me {
+  padding: 60px 20px;
+  background-color: #112240; /* Deep Blue Background */
+  color: #E0E0E0; /* Light Gray Text */
+  text-align: center; /* Centered Text */
+  border-top: 2px solid #48CAE4; /* Top Border for emphasis */
+}
+
+#about-me h2 {
+  font-size: 2.5em; /* Large Heading */
+  color: #48CAE4; /* Accent Color: Bright Cyan */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+#about-me p {
+  font-size: 1.2em; /* Slightly larger font for readability */
+  margin-bottom: 20px; /* Space below the paragraph */
+}
+
+#about-me ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+#about-me li {
+  font-size: 1.1em; /* Slightly smaller font for list items */
+  margin: 10px 0; /* Space between list items */
+}
+
+#about-me a {
+  color: #48CAE4; /* Link Color: Bright Cyan */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+#about-me a:hover {
+  color: #7ED957; /* Link Hover Color: Light Green */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    padding: 0.5em 0;
+  }
+
+  #navbar a {
+    margin: 10px 0;
+  }
+
+  #welcome-section h1 {
+    font-size: 2.5em;
+  }
+
+  #welcome-section p {
+    font-size: 1.2em; /* Adjust for smaller screens */
+  }
+
+  #projects {
+    padding: 60px 10px;
+  }
+
+  .project-tile {
+    width: 90%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #navbar a {
+    font-size: 1em;
+  }
+
+  #welcome-section h1 {
+    font-size: 2em;
+  }
+
+  #welcome-section p {
+    font-size: 1em; /* Further adjustment for smaller screens */
+  }
+
+  #projects h2 {
+    font-size: 2em;
+  }
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+
+/* For large desktops or wider screens */
+@media (min-width: 1200px) {
+  #welcome-section h1 {
+    font-size: 5em;
+  }
+
+  #navbar a {
+    font-size: 1.5em;
+  }
+
+  #projects h2 {
+    font-size: 3em;
+  }
+}
+
+/* For medium desktops (up to 1200px) */
+@media (max-width: 1200px) {
+  #welcome-section h1 {
+    font-size: 3.5em;
+  }
+
+  .project-tile {
+    width: 90%;
+  }
+
+  #projects h2 {
+    font-size: 2.2em;
+  }
+}
+
+/* For tablets and small desktops (max-width: 992px) */
+@media (max-width: 992px) {
+  #welcome-section h1 {
+    font-size: 3em;
+  }
+
+  #navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #navbar a {
+    margin: 5px 0;
+    font-size: 1.2em;
+  }
+
+  .project-tile {
+    max-width: 400px;
+  }
+}
+
+/* For phones and small devices (max-width: 600px) */
+@media (max-width: 600px) {
+  #welcome-section h1 {
+    font-size: 2.2em;
+  }
+
+  #navbar a {
+    font-size: 1em;
+  }
+
+  .project-tile {
+    width: 95%;
+    max-width: 320px;
+  }
+}
+
+/* For extra small devices (max-width: 400px) */
+@media (max-width: 400px) {
+  #welcome-section h1 {
+    font-size: 1.8em;
+  }
+
+  .project-tile {
+    width: 100%;
+  }
+}
